@@ -1,7 +1,7 @@
-all: main
+SRC = func.cpp
 
-main: main.cpp
-	g++ -o main main.cpp -lpcap
+all:
+	g++ -o network-miner main.cpp $(SRC) -lpcap
 
 clean:
-	rm *.o
+	rm network-miner *.o
