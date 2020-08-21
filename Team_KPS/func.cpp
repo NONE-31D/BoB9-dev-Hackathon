@@ -183,8 +183,12 @@ void analysis(pcap_t * pcap) {
                     if (payload_size == 0) printf("\nPayload Data Not Found...");
                     else {
                         print_binary(payload, payload_size);
-                        //if (ntohs(tcp_header->th_sport)==587 || ntohs(tcp_header->th_sport)==3326)
-                        //   smtp_analysis(payload, payload_size);
+                        // if (ntohs(tcp_header->th_sport)==587 || ntohs(tcp_header->th_sport)==3326)
+                        //     smtp_analysis(payload, payload_size);
+                        if (ntohs(tcp_header->th_sport) == 80 || ntohs(tcp_header->th_dport) == 80) {
+                            http_analysis(tcp_header, ip_header, payload, payload_size);
+                        }
+                    
                         // else if () http_analysis
                         // else if () ftp_analysis
                     }
