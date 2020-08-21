@@ -122,6 +122,8 @@ void analysis(pcap_t * pcap) {
                             http_analysis(tcp_header, ip_header, payload, payload_size);
                         else if (ntohs(tcp_header->th_sport) == 21 || ntohs(tcp_header->th_dport) == 21)
                             ftp_analysis(payload, payload_size);
+                        else if ((ntohs(tcp_header->th_sport) == 20 || ntohs(tcp_header->th_dport) == 20)&& is_file_mining == 2)
+                            ftp_fileMining(payload, payload_size);
                     }
                     
                     break;

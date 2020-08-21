@@ -1,0 +1,1366 @@
+Packet # 1
+Packet size: 66 bytes
+Epoch Time: 1598028856:437379 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+Payload Data Not Found...
+
+
+Packet # 2
+Packet size: 66 bytes
+Epoch Time: 1598028856:437541 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+Payload Data Not Found...
+
+
+Packet # 3
+Packet size: 54 bytes
+Epoch Time: 1598028856:437632 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+Payload Data Not Found...
+
+
+Packet # 4
+Packet size: 74 bytes
+Epoch Time: 1598028856:441093 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+
+>> FTP		|Command : 220 |args : (vsFTPd end
+
+Packet # 5
+Packet size: 64 bytes
+Epoch Time: 1598028856:441295 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+
+>> FTP		|Command : AUTH |args : TLS
+` end
+
+Packet # 6
+Packet size: 60 bytes
+Epoch Time: 1598028856:441400 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+Payload Data Not Found...
+
+
+Packet # 7
+Packet size: 92 bytes
+Epoch Time: 1598028856:441491 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+
+>> FTP		|Command : 530 |args : Please end
+
+Packet # 8
+Packet size: 64 bytes
+Epoch Time: 1598028856:441588 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+
+>> FTP		|Command : AUTH |args : SSL
+` end
+
+Packet # 9
+Packet size: 60 bytes
+Epoch Time: 1598028856:441662 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+Payload Data Not Found...
+
+
+Packet # 10
+Packet size: 92 bytes
+Epoch Time: 1598028856:441704 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+
+>> FTP		|Command : 530 |args : Please end
+
+Packet # 11
+Packet size: 69 bytes
+Epoch Time: 1598028856:443845 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+
+>> FTP		|Command : USER |args : none-31d
+ end
+
+Packet # 12
+Packet size: 60 bytes
+Epoch Time: 1598028856:443935 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+Payload Data Not Found...
+
+
+Packet # 13
+Packet size: 88 bytes
+Epoch Time: 1598028856:443971 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+
+>> FTP		|Command : 331 |args : Please end
+
+Packet # 14
+Packet size: 65 bytes
+Epoch Time: 1598028856:444057 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+
+>> FTP		|Command : PASS |args : toor
+ end
+
+Packet # 15
+Packet size: 60 bytes
+Epoch Time: 1598028856:444116 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+Payload Data Not Found...
+
+
+Packet # 16
+Packet size: 77 bytes
+Epoch Time: 1598028856:449534 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+
+>> FTP		|Command : 230 |args : Login end
+
+Packet # 17
+Packet size: 74 bytes
+Epoch Time: 1598028856:451916 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+
+>> FTP		|Command : CWD |args : /home/none-31d
+ end
+
+Packet # 18
+Packet size: 60 bytes
+Epoch Time: 1598028856:451981 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+Payload Data Not Found...
+
+
+Packet # 19
+Packet size: 91 bytes
+Epoch Time: 1598028856:452026 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+
+>> FTP		|Command : 250 |args : Directory end
+
+Packet # 20
+Packet size: 59 bytes
+Epoch Time: 1598028856:452119 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+
+>> FTP		|Command : PWD
+ |args : (null) end
+
+Packet # 21
+Packet size: 60 bytes
+Epoch Time: 1598028856:452181 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+Payload Data Not Found...
+
+
+Packet # 22
+Packet size: 101 bytes
+Epoch Time: 1598028856:452220 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+
+>> FTP		|Command : 257 |args : "/home/none-31d" end
+
+Packet # 23
+Packet size: 54 bytes
+Epoch Time: 1598028856:493414 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+Payload Data Not Found...
+
+
+Packet # 24
+Packet size: 62 bytes
+Epoch Time: 1598028858:889333 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+
+>> FTP		|Command : TYPE |args : I
+ end
+
+Packet # 25
+Packet size: 60 bytes
+Epoch Time: 1598028858:889529 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+Payload Data Not Found...
+
+
+Packet # 26
+Packet size: 85 bytes
+Epoch Time: 1598028858:889612 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+
+>> FTP		|Command : 200 |args : Switching end
+
+Packet # 27
+Packet size: 82 bytes
+Epoch Time: 1598028858:889922 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+
+>> FTP		|Command : PORT |args : 192,168,239,1,243,105
+ end
+
+Packet # 28
+Packet size: 60 bytes
+Epoch Time: 1598028858:889997 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+Payload Data Not Found...
+
+
+Packet # 29
+Packet size: 105 bytes
+Epoch Time: 1598028858:890234 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+
+>> FTP		|Command : 200 |args : PORT end
+
+Packet # 30
+Packet size: 68 bytes
+Epoch Time: 1598028858:890351 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+
+>> FTP		|Command : STOR |args : aaa.jpg
+d end
+ cmd STOR detected
+
+
+Packet # 31
+Packet size: 60 bytes
+Epoch Time: 1598028858:890417 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+Payload Data Not Found...
+
+
+Packet # 32
+Packet size: 74 bytes
+Epoch Time: 1598028858:890986 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:20
+Dest: 192.168.239.1:62313
+Payload Data Not Found...
+
+
+Packet # 33
+Packet size: 66 bytes
+Epoch Time: 1598028858:891112 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+Payload Data Not Found...
+
+
+Packet # 34
+Packet size: 60 bytes
+Epoch Time: 1598028858:891207 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:20
+Dest: 192.168.239.1:62313
+Payload Data Not Found...
+
+
+Packet # 35
+Packet size: 76 bytes
+Epoch Time: 1598028858:891274 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+
+>> FTP		|Command : 150 |args : Ok end
+
+Packet # 36
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891495 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 37
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891496 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 38
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891497 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 39
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891497 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 40
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891497 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 41
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891497 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 42
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891498 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 43
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891498 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 44
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891498 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 45
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891499 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 46
+Packet size: 60 bytes
+Epoch Time: 1598028858:891616 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:20
+Dest: 192.168.239.1:62313
+Payload Data Not Found...
+
+
+Packet # 47
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891748 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 48
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891749 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 49
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891749 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 50
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891750 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 51
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891750 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 52
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891750 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 53
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891750 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 54
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891751 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 55
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891751 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 56
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891751 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 57
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891752 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 58
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891752 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 59
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891752 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 60
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891752 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 61
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891752 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 62
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891753 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 63
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891753 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 64
+Packet size: 1514 bytes
+Epoch Time: 1598028858:891753 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 65
+Packet size: 60 bytes
+Epoch Time: 1598028858:891880 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:20
+Dest: 192.168.239.1:62313
+Payload Data Not Found...
+
+
+Packet # 66
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892007 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 67
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892009 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 68
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892009 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 69
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892009 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 70
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892010 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 71
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892010 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 72
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892010 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 73
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892011 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 74
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892011 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 75
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892011 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 76
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892011 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 77
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892012 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 78
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892012 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 79
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892012 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 80
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892012 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 81
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892013 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 82
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892013 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 83
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892013 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 84
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892013 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 85
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892014 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 86
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892014 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 87
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892014 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 88
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892014 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 89
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892015 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 90
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892015 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 91
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892015 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 92
+Packet size: 60 bytes
+Epoch Time: 1598028858:892304 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:20
+Dest: 192.168.239.1:62313
+Payload Data Not Found...
+
+
+Packet # 93
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892439 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 94
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892440 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 95
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892441 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 96
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892441 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 97
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892441 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 98
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892441 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 99
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892442 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 100
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892442 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 101
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892442 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 102
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892442 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 103
+Packet size: 1514 bytes
+Epoch Time: 1598028858:892443 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 104
+Packet size: 279 bytes
+Epoch Time: 1598028858:892443 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+
+
+Packet # 105
+Packet size: 60 bytes
+Epoch Time: 1598028858:892538 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:20
+Dest: 192.168.239.1:62313
+Payload Data Not Found...
+
+
+Packet # 106
+Packet size: 60 bytes
+Epoch Time: 1598028858:892600 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:20
+Dest: 192.168.239.1:62313
+Payload Data Not Found...
+
+
+Packet # 107
+Packet size: 54 bytes
+Epoch Time: 1598028858:892648 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62313
+Dest: 192.168.239.146:20
+Payload Data Not Found...
+
+
+Packet # 108
+Packet size: 78 bytes
+Epoch Time: 1598028858:892779 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+
+>> FTP		|Command : 226 |args : Transfer end
+
+Packet # 109
+Packet size: 54 bytes
+Epoch Time: 1598028858:892851 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+Payload Data Not Found...
+
+
+Packet # 110
+Packet size: 82 bytes
+Epoch Time: 1598028858:898450 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+
+>> FTP		|Command : PORT |args : 192,168,239,1,243,106
+ end
+
+Packet # 111
+Packet size: 60 bytes
+Epoch Time: 1598028858:898958 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+Payload Data Not Found...
+
+
+Packet # 112
+Packet size: 105 bytes
+Epoch Time: 1598028858:899101 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+
+>> FTP		|Command : 200 |args : PORT end
+
+Packet # 113
+Packet size: 60 bytes
+Epoch Time: 1598028858:899183 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+
+>> FTP		|Command : LIST
+\ |args : (null) end
+
+Packet # 114
+Packet size: 60 bytes
+Epoch Time: 1598028858:899243 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+Payload Data Not Found...
+
+
+Packet # 115
+Packet size: 74 bytes
+Epoch Time: 1598028858:899557 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:20
+Dest: 192.168.239.1:62314
+Payload Data Not Found...
+
+
+Packet # 116
+Packet size: 66 bytes
+Epoch Time: 1598028858:899639 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62314
+Dest: 192.168.239.146:20
+Payload Data Not Found...
+
+
+Packet # 117
+Packet size: 60 bytes
+Epoch Time: 1598028858:899701 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:20
+Dest: 192.168.239.1:62314
+Payload Data Not Found...
+
+
+Packet # 118
+Packet size: 93 bytes
+Epoch Time: 1598028858:899772 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+
+>> FTP		|Command : 150 |args : Here end
+
+Packet # 119
+Packet size: 854 bytes
+Epoch Time: 1598028858:899853 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:20
+Dest: 192.168.239.1:62314
+
+
+Packet # 120
+Packet size: 60 bytes
+Epoch Time: 1598028858:899882 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:20
+Dest: 192.168.239.1:62314
+Payload Data Not Found...
+
+
+Packet # 121
+Packet size: 54 bytes
+Epoch Time: 1598028858:899933 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62314
+Dest: 192.168.239.146:20
+Payload Data Not Found...
+
+
+Packet # 122
+Packet size: 54 bytes
+Epoch Time: 1598028858:899995 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62314
+Dest: 192.168.239.146:20
+Payload Data Not Found...
+
+
+Packet # 123
+Packet size: 60 bytes
+Epoch Time: 1598028858:900032 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:20
+Dest: 192.168.239.1:62314
+Payload Data Not Found...
+
+
+Packet # 124
+Packet size: 78 bytes
+Epoch Time: 1598028858:900092 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62312
+
+>> FTP		|Command : 226 |args : Directory end
+
+Packet # 125
+Packet size: 54 bytes
+Epoch Time: 1598028858:900181 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62312
+Dest: 192.168.239.146:21
+Payload Data Not Found...
+
+
+Packet # 126
+Packet size: 60 bytes
+Epoch Time: 1598028864:940512 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62307
+Dest: 192.168.239.146:21
+
+>> FTP		|Command : NOOP
+\ |args : (null) end
+
+Packet # 127
+Packet size: 60 bytes
+Epoch Time: 1598028864:940801 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62307
+Payload Data Not Found...
+
+
+Packet # 128
+Packet size: 68 bytes
+Epoch Time: 1598028864:940886 seconds
+Src MAC: 00:0c:29:4d:67:45
+Dst MAC: 00:50:56:c0:00:08
+Type: IP
+Src: 192.168.239.146:21
+Dest: 192.168.239.1:62307
+
+>> FTP		|Command : 200 |args : NOOP end
+
+Packet # 129
+Packet size: 54 bytes
+Epoch Time: 1598028864:982412 seconds
+Src MAC: 00:50:56:c0:00:08
+Dst MAC: 00:0c:29:4d:67:45
+Type: IP
+Src: 192.168.239.1:62307
+Dest: 192.168.239.146:21
+Payload Data Not Found...
+
+
