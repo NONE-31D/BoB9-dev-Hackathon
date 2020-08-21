@@ -2,6 +2,7 @@
 #define _FTP_H
 
 #include "../stdafx.h"
+//#include <cstdio>
 
 extern int is_file_mining;
 extern char file_name[500];

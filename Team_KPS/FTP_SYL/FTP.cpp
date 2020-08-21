@@ -1,6 +1,7 @@
 #include "FTP.h"
 
 int is_file_mining;
+char file_name[500];
 
 void ftp_analysis(u_char *payload, int payload_size){    
     char curr;
@@ -45,6 +46,7 @@ void ftp_analysis(u_char *payload, int payload_size){
     if(!strcmp(cmd, "RETR") || !strcmp(cmd, "STOR")) {
         is_file_mining = 1;
         printf("\n cmd %s detected\n", cmd);
+        strcpy(file_name, arg);
     }
 
     memset(cmd, '\0', idx);
@@ -53,6 +55,9 @@ void ftp_analysis(u_char *payload, int payload_size){
 }
 
 void ftp_fileMining(u_char *payload, int payload_size){
-    printf("yeah its time to mining!\n");
-    
+    printf("yeah its time to mining!--->%s\n", file_name);
+    printf("payload>>>\n%s", payload);
+    FILE *fp = fopen(file_name, "ab+");
+    fwrite(payload, payload_size, 1, fp);
+    fclose(fp);
 }
