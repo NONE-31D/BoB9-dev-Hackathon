@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include "SMTP_KBS/smtp.h"
 
 int main(int argc, char *argv[])
 {

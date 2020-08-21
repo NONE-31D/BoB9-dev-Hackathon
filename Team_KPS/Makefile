@@ -12,7 +12,5 @@ http:
 smtp:
 	g++ -c -o smtp.o ./SMTP_KBS/smtp.cpp
 
-
-
 clean:
 	rm network-miner *.o

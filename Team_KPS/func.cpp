@@ -57,7 +57,6 @@ void analysis(pcap_t * pcap) {
 
     struct tcphdr *tcp_header;
     int tcp_len;
-    u_char *tcp_payload;
 
     u_char *payload;
     int payload_size;
@@ -106,7 +105,6 @@ void analysis(pcap_t * pcap) {
                     // Show the TCP header info
                     tcp_header = (struct tcphdr *)(data + sizeof(struct ether_header) + ip_len);
                     tcp_len = tcp_header->th_off << 2;
-                    tcp_payload = (u_char *)(data + sizeof(struct ether_header) + ip_len);
 
                     // SHOW IP TCP Info
                     printf("Src: %s:%d\n", inet_ntoa(ip_header->ip_src), ntohs(tcp_header->th_sport));
@@ -116,18 +114,11 @@ void analysis(pcap_t * pcap) {
                     payload = (u_char *)(data + sizeof(struct ether_header) + ip_len + tcp_len);
                     payload_size = ntohs(ip_header->ip_len) - (tcp_len + ip_len);
 
-                    // SHOW TCP Payload
-                    printf("<TCP Payload>");
-                    print_binary(tcp_payload, tcp_len);
-                    
-                    printf("\n<Payload>");
-                    if (payload_size == 0) printf("\nPayload Data Not Found...");
+                    if (payload_size == 0) printf("Payload Data Not Found...\n");
                     else {
                         if (ntohs(tcp_header->th_sport)==587 || ntohs(tcp_header->th_sport)==3326)
-                           smtp_analysis(payload, payload_size);
-                        // else if () http_analysis
-                        // else if () ftp_analysis
-                        else if (ntohs(tcp_header->th_sport) == 80 || ntohs(tcp_header->th_dport) == 80) 
+                           smtp_analysis(ntohs(tcp_header->th_sport), payload, payload_size);
+                        else if (ntohs(tcp_header->th_sport) == 80 || ntohs(tcp_header->th_dport) == 80)
                             http_analysis(tcp_header, ip_header, payload, payload_size);
                         else if (ntohs(tcp_header->th_sport) == 21 || ntohs(tcp_header->th_dport) == 21)
                             ftp_analysis(payload, payload_size);
@@ -144,11 +135,12 @@ void analysis(pcap_t * pcap) {
                     // Unknown Fucntion();
                     break;
             }
+        }
+        // Packet Memory initialization
+        memset(ip_header, '\0', ntohs(ip_header->ip_len));
+        memset(tcp_header, '\0', tcp_len);
+        memset(payload, '\0', payload_size);
 
-            // Packet Memory initialization
-            memset(ip_header, '\0', ntohs(ip_header->ip_len));
-        }  
-        
         // Add two lines between packets
         printf("\n\n");
     }
