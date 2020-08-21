@@ -1,9 +1,34 @@
 #include "FTP.h"
 
 void ftp_analysis(u_char *payload, int payload_size){    
+    char curr;
+    int idx = 0;
     
+    // strstr func
+    // split by space. just find index of space. 
+    do {
+        curr = *(payload+idx);
+        if(curr == 0x20) break;
+        idx++;
+    } while(curr);
+    
+    char cmd[idx+1];
+    strncpy(cmd, (char*)payload, idx);
+    cmd[idx] = '\0';
 
-    printf("\n>> FTP\t\t|Command : %s |args : %s end", cmd, arg);
+    u_char* arg_start = payload+idx+1;
+    idx = 0;
+    do {
+        curr = *(arg_start + idx);
+        if(curr == 0x0D) break;
+        idx++;
+    } while(curr);
+
+    char arg[idx+1];
+    strncpy(arg, (char*)arg_start, idx);
+    arg[idx] = '\0';
+
+    printf(">>> FTP\tCommand : %s |args : %s", cmd, arg);
     
     if(is_file_mining == 1){
         if (!strcmp(cmd, "150")) is_file_mining = 2;

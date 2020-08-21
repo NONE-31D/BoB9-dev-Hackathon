@@ -39,8 +39,7 @@ Dst MAC: 00:50:56:c0:00:08
 Type: IP
 Src: 192.168.239.146:21
 Dest: 192.168.239.1:62312
-
->> FTP		|Command : 220 |args : (vsFTPd end
+>>> FTP	Command : 220 |args : (vsFTPd 3.0.3)
 
 Packet # 5
 Packet size: 64 bytes
@@ -50,9 +49,7 @@ Dst MAC: 00:0c:29:4d:67:45
 Type: IP
 Src: 192.168.239.1:62312
 Dest: 192.168.239.146:21
-
->> FTP		|Command : AUTH |args : TLS
-` end
+>>> FTP	Command : AUTH |args : TLS
 
 Packet # 6
 Packet size: 60 bytes
@@ -73,8 +70,7 @@ Dst MAC: 00:50:56:c0:00:08
 Type: IP
 Src: 192.168.239.146:21
 Dest: 192.168.239.1:62312
-
->> FTP		|Command : 530 |args : Please end
+>>> FTP	Command : 530 |args : Please login with USER and PASS.
 
 Packet # 8
 Packet size: 64 bytes
@@ -84,9 +80,7 @@ Dst MAC: 00:0c:29:4d:67:45
 Type: IP
 Src: 192.168.239.1:62312
 Dest: 192.168.239.146:21
-
->> FTP		|Command : AUTH |args : SSL
-` end
+>>> FTP	Command : AUTH |args : SSL
 
 Packet # 9
 Packet size: 60 bytes
@@ -107,8 +101,7 @@ Dst MAC: 00:50:56:c0:00:08
 Type: IP
 Src: 192.168.239.146:21
 Dest: 192.168.239.1:62312
-
->> FTP		|Command : 530 |args : Please end
+>>> FTP	Command : 530 |args : Please login with USER and PASS.
 
 Packet # 11
 Packet size: 69 bytes
@@ -118,9 +111,7 @@ Dst MAC: 00:0c:29:4d:67:45
 Type: IP
 Src: 192.168.239.1:62312
 Dest: 192.168.239.146:21
-
->> FTP		|Command : USER |args : none-31d
- end
+>>> FTP	Command : USER |args : none-31d
 
 Packet # 12
 Packet size: 60 bytes
@@ -141,8 +132,7 @@ Dst MAC: 00:50:56:c0:00:08
 Type: IP
 Src: 192.168.239.146:21
 Dest: 192.168.239.1:62312
-
->> FTP		|Command : 331 |args : Please end
+>>> FTP	Command : 331 |args : Please specify the password.
 
 Packet # 14
 Packet size: 65 bytes
@@ -152,9 +142,7 @@ Dst MAC: 00:0c:29:4d:67:45
 Type: IP
 Src: 192.168.239.1:62312
 Dest: 192.168.239.146:21
-
->> FTP		|Command : PASS |args : toor
- end
+>>> FTP	Command : PASS |args : toor
 
 Packet # 15
 Packet size: 60 bytes
@@ -175,8 +163,7 @@ Dst MAC: 00:50:56:c0:00:08
 Type: IP
 Src: 192.168.239.146:21
 Dest: 192.168.239.1:62312
-
->> FTP		|Command : 230 |args : Login end
+>>> FTP	Command : 230 |args : Login successful.
 
 Packet # 17
 Packet size: 74 bytes
@@ -186,9 +173,7 @@ Dst MAC: 00:0c:29:4d:67:45
 Type: IP
 Src: 192.168.239.1:62312
 Dest: 192.168.239.146:21
-
->> FTP		|Command : CWD |args : /home/none-31d
- end
+>>> FTP	Command : CWD |args : /home/none-31d
 
 Packet # 18
 Packet size: 60 bytes
@@ -209,8 +194,7 @@ Dst MAC: 00:50:56:c0:00:08
 Type: IP
 Src: 192.168.239.146:21
 Dest: 192.168.239.1:62312
-
->> FTP		|Command : 250 |args : Directory end
+>>> FTP	Command : 250 |args : Directory successfully changed.
 
 Packet # 20
 Packet size: 59 bytes
@@ -220,9 +204,8 @@ Dst MAC: 00:0c:29:4d:67:45
 Type: IP
 Src: 192.168.239.1:62312
 Dest: 192.168.239.146:21
-
->> FTP		|Command : PWD
- |args : (null) end
+>>> FTP	Command : PWD
+ |args : 
 
 Packet # 21
 Packet size: 60 bytes
@@ -243,8 +226,7 @@ Dst MAC: 00:50:56:c0:00:08
 Type: IP
 Src: 192.168.239.146:21
 Dest: 192.168.239.1:62312
-
->> FTP		|Command : 257 |args : "/home/none-31d" end
+>>> FTP	Command : 257 |args : "/home/none-31d" is the current directory
 
 Packet # 23
 Packet size: 54 bytes
@@ -265,9 +247,7 @@ Dst MAC: 00:0c:29:4d:67:45
 Type: IP
 Src: 192.168.239.1:62312
 Dest: 192.168.239.146:21
-
->> FTP		|Command : TYPE |args : I
- end
+>>> FTP	Command : TYPE |args : I
 
 Packet # 25
 Packet size: 60 bytes
@@ -288,8 +268,7 @@ Dst MAC: 00:50:56:c0:00:08
 Type: IP
 Src: 192.168.239.146:21
 Dest: 192.168.239.1:62312
-
->> FTP		|Command : 200 |args : Switching end
+>>> FTP	Command : 200 |args : Switching to Binary mode.
 
 Packet # 27
 Packet size: 82 bytes
@@ -299,9 +278,7 @@ Dst MAC: 00:0c:29:4d:67:45
 Type: IP
 Src: 192.168.239.1:62312
 Dest: 192.168.239.146:21
-
->> FTP		|Command : PORT |args : 192,168,239,1,243,105
- end
+>>> FTP	Command : PORT |args : 192,168,239,1,243,105
 
 Packet # 28
 Packet size: 60 bytes
@@ -322,8 +299,7 @@ Dst MAC: 00:50:56:c0:00:08
 Type: IP
 Src: 192.168.239.146:21
 Dest: 192.168.239.1:62312
-
->> FTP		|Command : 200 |args : PORT end
+>>> FTP	Command : 200 |args : PORT command successful. Consider using PASV.
 
 Packet # 30
 Packet size: 68 bytes
@@ -333,9 +309,7 @@ Dst MAC: 00:0c:29:4d:67:45
 Type: IP
 Src: 192.168.239.1:62312
 Dest: 192.168.239.146:21
-
->> FTP		|Command : STOR |args : aaa.jpg
-d end
+>>> FTP	Command : STOR |args : aaa.jpg
  cmd STOR detected
 
 
@@ -391,8 +365,7 @@ Dst MAC: 00:50:56:c0:00:08
 Type: IP
 Src: 192.168.239.146:21
 Dest: 192.168.239.1:62312
-
->> FTP		|Command : 150 |args : Ok end
+>>> FTP	Command : 150 |args : Ok to send data.
 
 Packet # 36
 Packet size: 1514 bytes
@@ -1128,8 +1101,7 @@ Dst MAC: 00:50:56:c0:00:08
 Type: IP
 Src: 192.168.239.146:21
 Dest: 192.168.239.1:62312
-
->> FTP		|Command : 226 |args : Transfer end
+>>> FTP	Command : 226 |args : Transfer complete.
 
 Packet # 109
 Packet size: 54 bytes
@@ -1150,9 +1122,7 @@ Dst MAC: 00:0c:29:4d:67:45
 Type: IP
 Src: 192.168.239.1:62312
 Dest: 192.168.239.146:21
-
->> FTP		|Command : PORT |args : 192,168,239,1,243,106
- end
+>>> FTP	Command : PORT |args : 192,168,239,1,243,106
 
 Packet # 111
 Packet size: 60 bytes
@@ -1173,8 +1143,7 @@ Dst MAC: 00:50:56:c0:00:08
 Type: IP
 Src: 192.168.239.146:21
 Dest: 192.168.239.1:62312
-
->> FTP		|Command : 200 |args : PORT end
+>>> FTP	Command : 200 |args : PORT command successful. Consider using PASV.
 
 Packet # 113
 Packet size: 60 bytes
@@ -1184,9 +1153,8 @@ Dst MAC: 00:0c:29:4d:67:45
 Type: IP
 Src: 192.168.239.1:62312
 Dest: 192.168.239.146:21
-
->> FTP		|Command : LIST
-\ |args : (null) end
+>>> FTP	Command : LIST
+\ |args : 
 
 Packet # 114
 Packet size: 60 bytes
@@ -1240,8 +1208,7 @@ Dst MAC: 00:50:56:c0:00:08
 Type: IP
 Src: 192.168.239.146:21
 Dest: 192.168.239.1:62312
-
->> FTP		|Command : 150 |args : Here end
+>>> FTP	Command : 150 |args : Here comes the directory listing.
 
 Packet # 119
 Packet size: 854 bytes
@@ -1305,8 +1272,7 @@ Dst MAC: 00:50:56:c0:00:08
 Type: IP
 Src: 192.168.239.146:21
 Dest: 192.168.239.1:62312
-
->> FTP		|Command : 226 |args : Directory end
+>>> FTP	Command : 226 |args : Directory send OK.
 
 Packet # 125
 Packet size: 54 bytes
@@ -1327,9 +1293,8 @@ Dst MAC: 00:0c:29:4d:67:45
 Type: IP
 Src: 192.168.239.1:62307
 Dest: 192.168.239.146:21
-
->> FTP		|Command : NOOP
-\ |args : (null) end
+>>> FTP	Command : NOOP
+\ |args : 
 
 Packet # 127
 Packet size: 60 bytes
@@ -1350,8 +1315,7 @@ Dst MAC: 00:50:56:c0:00:08
 Type: IP
 Src: 192.168.239.146:21
 Dest: 192.168.239.1:62307
-
->> FTP		|Command : 200 |args : NOOP end
+>>> FTP	Command : 200 |args : NOOP ok.
 
 Packet # 129
 Packet size: 54 bytes
