@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "SMTP_KBS/smtp.h"
+#include "HTTP_PSM/http.h"
+#include "FTP_SYL/FTP.h"
 
 void show_interface() {
     char errbuf[PCAP_ERRBUF_SIZE];
@@ -125,6 +127,10 @@ void analysis(pcap_t * pcap) {
                            smtp_analysis(payload, payload_size);
                         // else if () http_analysis
                         // else if () ftp_analysis
+                        else if (ntohs(tcp_header->th_sport) == 80 || ntohs(tcp_header->th_dport) == 80) 
+                            http_analysis(tcp_header, ip_header, payload, payload_size);
+                        else if (ntohs(tcp_header->th_sport) == 21 || ntohs(tcp_header->th_dport) == 21)
+                            ftp_analysis(payload, payload_size);
                     }
                     
                     break;
