@@ -1,5 +1,7 @@
 #include "FTP.h"
 
+int is_file_mining;
+
 void ftp_analysis(u_char *payload, int payload_size){    
     char curr;
     int idx = 0;
@@ -11,7 +13,7 @@ void ftp_analysis(u_char *payload, int payload_size){
         if(curr == 0x20) break;
         idx++;
     } while(curr);
-    
+
     char cmd[idx+1];
     strncpy(cmd, (char*)payload, idx);
     cmd[idx] = '\0';
@@ -28,11 +30,17 @@ void ftp_analysis(u_char *payload, int payload_size){
     strncpy(arg, (char*)arg_start, idx);
     arg[idx] = '\0';
 
-    printf(">>> FTP\tCommand : %s |args : %s", cmd, arg);
+    printf(">>> FTP\tCommand : %s |args : %s\n", cmd, arg);
     
     if(is_file_mining == 1){
         if (!strcmp(cmd, "150")) is_file_mining = 2;
+        return;
     } 
+
+    if(is_file_mining = 2 && !strcmp(cmd, "226")){
+        printf("[INFO] finish file mining ===>\n");
+        is_file_mining = 0;
+    }
         
     if(!strcmp(cmd, "RETR") || !strcmp(cmd, "STOR")) {
         is_file_mining = 1;
@@ -45,5 +53,6 @@ void ftp_analysis(u_char *payload, int payload_size){
 }
 
 void ftp_fileMining(u_char *payload, int payload_size){
+    printf("yeah its time to mining!\n");
     
 }
