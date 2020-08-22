@@ -77,10 +77,22 @@ def file_analysis_result(md5):
 
     response = requests.get(url, params=params)
 
-    print(response.json())
+    scan_result = response.json()
+    print('\033[1m'+"SCAN RESULT ===================================================")
+    print('\033[0m')
+
+    for key, val in scan_result.items():
+        if key == "scans":
+            for key2, val2 in val.items():
+                print(f"{key2:20} detection ==> {val2['detected']}")
+            continue
+        print(f"**{key}**")
+        print(val)
+        print()
+    
+
 
 def get_report():
-    print(md5_queue)
     if md5_queue:
         md5 = md5_queue.popleft()
         file_analysis_result(md5)
@@ -89,12 +101,4 @@ def get_report():
 
 md5_queue = deque()
 if __name__ == "__main__":
-    # mkdir_output()
-    # th1 = Process(target=file_catcher)
-    # th2 = Process(target=get_report)
-
-    # th1.start()
-    # th2.start()
-    # th1.join()
-    # th2.join()
     file_catcher()

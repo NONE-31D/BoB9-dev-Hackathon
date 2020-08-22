@@ -56,7 +56,7 @@ void ftp_analysis(u_char *payload, int payload_size){
 }
 
 void ftp_fileMining(u_char *payload, int payload_size){
-    printf("payload>>>\n%s", payload);
+    // printf("payload>>>\n%s", payload);
     FILE *fp = fopen(file_name, "ab+");
     fwrite(payload, payload_size, 1, fp);
     fclose(fp);
