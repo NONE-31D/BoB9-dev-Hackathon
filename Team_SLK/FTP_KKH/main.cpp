@@ -13,6 +13,7 @@
 #include "PcapFileDevice.h"
 #include "RawPacket.h"
 #include <bits/stdc++.h>
+#include "json/json.h"
 
 using namespace std;
 
@@ -20,6 +21,8 @@ vector<pair<int, string>> FTP_LOG;
 queue<pair<string, string>> FTP_QUEUE;
 int ftp_response_code;
 string ftp_response_arg, ftp_request_cmd, ftp_request_arg;
+
+Json::Value root;
 
 std::string getProtocolTypeAsString(pcpp::ProtocolType protocolType) {
    switch (protocolType) {
@@ -94,7 +97,9 @@ uint8_t my_ntohs(uint8_t n) {
 }
 
 u_char ftp_data[1111111];
-unsigned int ftp_data_size, ftp_data_idx;
+u_char smtp_data[1111111];
+int smtp_data_flag;
+unsigned int ftp_data_size, ftp_data_idx, smtp_data_idx;
 
 int main(int argc, char* argv[]) {
 
@@ -212,18 +217,47 @@ int main(int argc, char* argv[]) {
 
       if(is_tcp == 4) {
          if (httpRequestLayer == NULL) {
+            /*
             if((src_port == 25)||(src_port == 465)||(src_port == 587)||(src_port == 2525)||
             (dst_port == 25)||(dst_port == 465)||(dst_port == 587)||(dst_port == 2525)) {
+            */
+            if ((src_port == 587 || src_port == 3326) && (dst_port == 587 || dst_port == 3326)) { // SMTP 패킷이라면...
                printf("\n[ SMTP Packet ]\n");
 
                const u_char* packet;
                packet = (u_char*) rawPacket.getRawData();
+               string smtp_response_code = "";
+               if (src_port == 587) { // server -> client
+                  printf("(server) -> (client)\n");
+                  for (int i = payload_start; i < payload_start + 3; i++) {
+                     smtp_response_code += packet[i];
+                  }
+                  cout << "smtp response code : " << smtp_response_code << '\n';
+                  if (smtp_response_code == "354") {
+                     smtp_data_flag = 1;
+                  }
+                  if (smtp_data_flag && smtp_response_code == "250") {
+                     smtp_data_flag = 0;
+                     for (int i = 0; i < smtp_data_idx; i++) {
+                        printf("%c" , smtp_data[i]);
+                     }
+                  }
+               } else if (dst_port == 587) { // client -> server
+                  printf("(client) -> (server)\n");
+                  if (smtp_data_flag) {
+                     for (int i = payload_start; i < total_length; i++) {
+                        smtp_data[smtp_data_idx++] = packet[i];
+                     }
+                  }
+               }
 
+               string response_code = "";
                printf("Response : ");
                for(int i = payload_start; i<total_length; i++) {
                   printf("%c", packet[i]);
                }
                printf("\n");
+
             } else if (src_port == 21) { // FTP Response 패킷이라면...
                printf("\n[ FTP Response Packet ]\n");
                const uint8_t* packet = rawPacket.getRawData();
@@ -308,6 +342,20 @@ int main(int argc, char* argv[]) {
                }
                printf("ftp_data_port : %d\n", ftp_data_port);
 
+
+               Json::Value temp;
+               temp["Source Mac"] = ethernetLayer->getSourceMac().toString();
+               temp["Destination Mac"] = ethernetLayer->getDestMac().toString();
+               temp["Source Ip"] = ipLayer->getSrcIpAddress().toString();
+               temp["Destination Ip"] = ipLayer->getDstIpAddress().toString();
+               temp["Source TCP Port"] = (int)ntohs(tcpLayer->getTcpHeader()->portSrc);
+               temp["Destination TCP Port"] = (int)ntohs(tcpLayer->getTcpHeader()->portDst);
+               temp["Protocol"] = "FTP";
+               temp["Response code"] = ftp_response_code;
+               temp["Response arg"] = ftp_response_arg;
+
+               root.append(temp);
+
             } else if (dst_port == 21) { // FTP Request 패킷이라면...
                printf("\n[ FTP Request Packet ]\n");
                const uint8_t* packet = rawPacket.getRawData();
@@ -350,14 +398,38 @@ int main(int argc, char* argv[]) {
                   FTP_QUEUE.push({ ftp_request_cmd, ftp_request_arg });
                   FTP_LOG.push_back({ 1, ftp_command });
                }
+
+               Json::Value temp;
+               temp["Source Mac"] = ethernetLayer->getSourceMac().toString();
+               temp["Destination Mac"] = ethernetLayer->getDestMac().toString();
+               temp["Source Ip"] = ipLayer->getSrcIpAddress().toString();
+               temp["Destination Ip"] = ipLayer->getDstIpAddress().toString();
+               temp["Source TCP Port"] = (int)ntohs(tcpLayer->getTcpHeader()->portSrc);
+               temp["Destination TCP Port"] = (int)ntohs(tcpLayer->getTcpHeader()->portDst);
+               temp["Protocol"] = "FTP";
+               temp["Request cmd"] = ftp_request_cmd;
+               temp["Request arg"] = ftp_response_arg;
+
+               root.append(temp);
+
             } else if (src_port == ftp_data_port) { // 받는 FTP-DATA 패킷이라면...
 
-               printf("\n[ FTP DATA Packet ] : 받는\n");
                FTP_LOG.push_back({ 2, ftp_request_cmd + " " + ftp_request_arg });
 
-            } else if (dst_port == ftp_data_port) { // 보내는. 업로드하는 FTP-DATA 패킷이라면...
+               Json::Value temp;
+               temp["Source Mac"] = ethernetLayer->getSourceMac().toString();
+               temp["Destination Mac"] = ethernetLayer->getDestMac().toString();
+               temp["Source Ip"] = ipLayer->getSrcIpAddress().toString();
+               temp["Destination Ip"] = ipLayer->getDstIpAddress().toString();
+               temp["Source TCP Port"] = (int)ntohs(tcpLayer->getTcpHeader()->portSrc);
+               temp["Destination TCP Port"] = (int)ntohs(tcpLayer->getTcpHeader()->portDst);
+               temp["Protocol"] = "FTP-DATA";
 
-               printf("\n[ FTP DATA Packet ] : 보내는\n");
+               root.append(temp);
+
+               if (ftp_request_cmd != "RETR") continue;
+
+               printf("\n[ FTP DATA Packet ] : 받는\n");
 
                const uint8_t* packet = rawPacket.getRawData();
 
@@ -371,8 +443,35 @@ int main(int argc, char* argv[]) {
                }
                ftp_data_size += total_length - start;
 
-               FTP_LOG.push_back({ 2, ftp_request_cmd + " " + ftp_request_arg });
+            } else if (dst_port == ftp_data_port) { // 보내는. 업로드하는 FTP-DATA 패킷이라면...
 
+               FTP_LOG.push_back({ 3, ftp_request_cmd + " " + ftp_request_arg });
+               
+               Json::Value temp;
+               temp["Source Mac"] = ethernetLayer->getSourceMac().toString();
+               temp["Destination Mac"] = ethernetLayer->getDestMac().toString();
+               temp["Source Ip"] = ipLayer->getSrcIpAddress().toString();
+               temp["Destination Ip"] = ipLayer->getDstIpAddress().toString();
+               temp["Source TCP Port"] = (int)ntohs(tcpLayer->getTcpHeader()->portSrc);
+               temp["Destination TCP Port"] = (int)ntohs(tcpLayer->getTcpHeader()->portDst);
+               temp["Protocol"] = "FTP-DATA";
+
+               root.append(temp);
+
+               if (ftp_request_cmd != "STOR") continue;
+               printf("\n[ FTP DATA Packet ] : 보내는\n");
+
+               const uint8_t* packet = rawPacket.getRawData();
+
+               uint16_t start = 14 + 20 + my_ntohs(packet[46]) * 4;
+
+               printf("start index is %d\n", start);
+               printf("total length is %d\n", total_length);
+
+               for (int i = start; i < total_length; i++) {
+                  ftp_data[ftp_data_idx++] = packet[i];
+               }
+               ftp_data_size += total_length - start;
             }
          }
       }
@@ -391,8 +490,10 @@ int main(int argc, char* argv[]) {
    for (int i = 0; i < FTP_LOG.size(); i++) {
       if (FTP_LOG[i].first == 1) { // FTP Request
          cout << "Request : " << FTP_LOG[i].second << "\n";
-      } else if (FTP_LOG[i].first == 2) { // FTP-DATA
-         cout << "FTP-DATA : (" << FTP_LOG[i].second << ")\n";
+      } else if (FTP_LOG[i].first == 2) { // FTP-DATA (server -> client)
+         cout << "FTP-DATA [server -> client] : (" << FTP_LOG[i].second << ")\n";
+      } else if (FTP_LOG[i].first == 3) { // FTP-DATA (client -> server)
+         cout << "FTP-DATA [client -> server] : (" << FTP_LOG[i].second << ")\n";
       } else {
          cout << "Response : " << FTP_LOG[i].first << " " << FTP_LOG[i].second << '\n';
       }
@@ -404,6 +505,10 @@ int main(int argc, char* argv[]) {
       FTP_QUEUE.pop();
    }
    */
+
+  //JSON 쓰기
+   ofstream outFile("ftp_log.json", ios::out);
+   outFile << root;
 
    reader->close();
 
