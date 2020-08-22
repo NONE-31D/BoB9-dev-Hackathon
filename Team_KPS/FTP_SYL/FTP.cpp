@@ -35,11 +35,12 @@ void ftp_analysis(u_char *payload, int payload_size){
     
     if(is_file_mining == 1){
         if (!strcmp(cmd, "150")) is_file_mining = 2;
+        printf("[INFO] Start File Mining, %s\n", file_name);
         return;
     } 
 
     if(is_file_mining = 2 && !strcmp(cmd, "226")){
-        printf("[INFO] finish file mining ===>\n");
+        printf("[INFO] finish file mining ===> %s\n", file_name);
         is_file_mining = 0;
     }
         
@@ -55,7 +56,6 @@ void ftp_analysis(u_char *payload, int payload_size){
 }
 
 void ftp_fileMining(u_char *payload, int payload_size){
-    printf("yeah its time to mining!--->%s\n", file_name);
     printf("payload>>>\n%s", payload);
     FILE *fp = fopen(file_name, "ab+");
     fwrite(payload, payload_size, 1, fp);
