@@ -125,9 +125,9 @@ void analysis(pcap_t * pcap) {
                         protocols.dport = tcp_header->th_dport;
 
                         if (ntohs(tcp_header->th_sport)==587 || ntohs(tcp_header->th_sport)==3326)
-                           smtp_analysis(ntohs(tcp_header->th_sport), payload, payload_size);
-                        else if (ntohs(tcp_header->th_sport) == 80 || ntohs(tcp_header->th_dport) == 80);
-                            // http_analysis(tcp_header, ip_header, payload, payload_size);
+                            smtp_analysis(ntohs(tcp_header->th_sport), payload, payload_size);
+                        else if (ntohs(tcp_header->th_sport) == 80 || ntohs(tcp_header->th_dport) == 80)
+                            http_analysis(tcp_header, ip_header, payload, payload_size);
                         else if (ntohs(tcp_header->th_sport) == 21 || ntohs(tcp_header->th_dport) == 21)
                             ftp_analysis(payload, payload_size, protocols);
                         else if ((ntohs(tcp_header->th_sport) == 20 || ntohs(tcp_header->th_dport) == 20)&& is_file_mining == 2)

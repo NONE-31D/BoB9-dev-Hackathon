@@ -18,9 +18,6 @@ void http_analysis (struct tcphdr *tcp_header, struct ip *ip_header, u_char *pay
         packet_info.dip   = ip_header->ip_dst.s_addr;
         memset(packet_info.file_name, 0, sizeof(packet_info.file_name));
 
-        // packet_info.sip   = ntohl(ip_header->ip_src.s_addr);
-        // packet_info.dip   = ntohl(ip_header->ip_dst.s_addr);
-
         // receiver에 넣기
         receiver.insert(std::make_pair(packet_info.sport, packet_info));
 
@@ -90,13 +87,13 @@ void parsing_request (u_char *payload, int payload_size, std::map<u_int16_t, IPv
 
     // first line parsing -> get file name
     char *sub_str = strtok((char *) payload, " ");
-    printf("\nrequest mode : %s\n", sub_str);
+    printf("[REQUEST] request mode : %s\n", sub_str);
 
     memset(receiver[my_port].file_name, 0, 256);
     sub_str = strtok(NULL, " ");
     memcpy(receiver[my_port].file_name, sub_str, strlen(sub_str));
     change_directory_name(receiver[my_port].file_name);
-    printf("file name : %s -> %s(%d)\n", sub_str, receiver[my_port].file_name, strlen(receiver[my_port].file_name));
+    printf("[REQUEST] file name : %s -> %s(%d)\n", sub_str, receiver[my_port].file_name, strlen(receiver[my_port].file_name));
 
     // file open
     char file_path[256] = {0, };
@@ -112,7 +109,6 @@ void parsing_request (u_char *payload, int payload_size, std::map<u_int16_t, IPv
 
     // all of the lines save to file
     fprintf(fp, "%s\n", first_line);
-    printf("file write : %s\n", first_line);
     while (start < end) {
         start = end+2;
         end = start + parsing(payload+start, payload_size-start);
@@ -121,7 +117,6 @@ void parsing_request (u_char *payload, int payload_size, std::map<u_int16_t, IPv
         char *temp = (char *) malloc(sizeof(char) * (end-start));
         strncpy(temp, (char *) payload+start, end-start);
         fprintf(fp, "%s\n", temp);
-        printf("file write : %s\n", temp);
         free(temp);
     }
     
@@ -131,7 +126,7 @@ void parsing_request (u_char *payload, int payload_size, std::map<u_int16_t, IPv
 void parsing_response (u_char *payload, int payload_size, std::map<u_int16_t, IPv4_INFO> &receiver, u_int16_t my_port) {
     // 파일이 존재하지 않았던, 첫 작성일 경우 헤더를 request 헤더 작성한 곳에 작성
 
-    printf("[RESPONSE] file name... %s\n", receiver[my_port].file_name);
+    printf("\n[RESPONSE] file name... %s\n", receiver[my_port].file_name);
 
     // File not exists
     int pointer = 0;
@@ -148,7 +143,6 @@ void parsing_response (u_char *payload, int payload_size, std::map<u_int16_t, IP
         memcpy(first_line, payload, end);
 
         fprintf(fp, "%s\n", first_line);
-        printf("file write : %s\n", first_line);
         while (start < end) {
             start = end+2;
             end = start + parsing(payload+start, payload_size-start);
@@ -157,7 +151,6 @@ void parsing_response (u_char *payload, int payload_size, std::map<u_int16_t, IP
             char *temp = (char *) malloc(sizeof(char) * (end-start));
             strncpy(temp, (char *) payload+start, end-start);
             fprintf(fp, "%s\n", temp);
-            printf("file write : %s\n", temp);
             free(temp);
         }
 
@@ -173,12 +166,10 @@ void parsing_response (u_char *payload, int payload_size, std::map<u_int16_t, IP
         fclose(fp);
     }
         
-    printf("\n SAVING HTTP HEADER COMPLETE ! ======================================\n");
-
     // 이미 존재하던 파일의 경우 body를 append로 작성
     FILE *fp = fopen(receiver[my_port].file_name, "ab");
     int ret = fwrite(payload+pointer, sizeof(char), payload_size - pointer, fp);
-    printf("%d write -> fwrite return %d\n", payload_size-pointer, ret);
+    printf("http body size : %d\n", ret);
     fclose(fp);
 }
 
@@ -269,7 +260,7 @@ void handle_http (u_char *payload, int payload_size, std::map<u_int16_t, IPv4_IN
             return;
         }
 
-        printf("[REQUEST] call parsing_request : payload_size = %d\n", payload_size);
+        printf("\n[REQUEST] call parsing_request : payload_size = %d\n", payload_size);
         if (payload_size > 0) {
             parsing_request(payload, payload_size, receiver, my_port);
         }
@@ -282,7 +273,6 @@ void handle_http (u_char *payload, int payload_size, std::map<u_int16_t, IPv4_IN
     }
     // response packet
     else if (request_flag == 0) {
-        printf("RESPONSE PACKET...\n");
         // filename 읽어와 해당 file에 data append
         char curdir[256] = {0, };
         if (getcwd(curdir, 256) == NULL) {
@@ -293,7 +283,7 @@ void handle_http (u_char *payload, int payload_size, std::map<u_int16_t, IPv4_IN
 
         char base_dir[256] = {0, };
         sprintf(base_dir, "./OUTPUT/HTTP/%s/%u", inet_ntoa(* (struct in_addr *) &receiver[my_port].dip), my_port);
-        printf("base dir : %s\n", base_dir);
+        printf("\n[RESPONSE] base dir : %s\n", base_dir);
 
         // goto base directory
         if (chdir(base_dir) == -1) {
@@ -313,8 +303,6 @@ void handle_http (u_char *payload, int payload_size, std::map<u_int16_t, IPv4_IN
         }
     }
 }
-
-
 
 
 /* Seung Min Code End */
