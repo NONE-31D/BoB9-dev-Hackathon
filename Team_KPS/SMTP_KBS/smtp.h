@@ -8,3 +8,5 @@
 
 void smtp_analysis(int port, u_char *payload, int length);
 int split(u_char *payload, int find);
+void result_file();
+void result_document(u_char *payload, int length);
