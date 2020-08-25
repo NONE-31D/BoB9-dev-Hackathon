@@ -116,12 +116,20 @@ void analysis(pcap_t * pcap) {
 
                     if (payload_size == 0) printf("Payload Data Not Found...\n");
                     else {
+                        Protocols protocols;
+                        protocols.dmac = dmac;
+                        protocols.smac = smac;
+                        protocols.ip_src = ip_header->ip_src;
+                        protocols.ip_dst = ip_header->ip_dst;
+                        protocols.sport = tcp_header->th_sport;
+                        protocols.dport = tcp_header->th_dport;
+
                         if (ntohs(tcp_header->th_sport)==587 || ntohs(tcp_header->th_sport)==3326)
                            smtp_analysis(ntohs(tcp_header->th_sport), payload, payload_size);
                         else if (ntohs(tcp_header->th_sport) == 80 || ntohs(tcp_header->th_dport) == 80);
                             // http_analysis(tcp_header, ip_header, payload, payload_size);
                         else if (ntohs(tcp_header->th_sport) == 21 || ntohs(tcp_header->th_dport) == 21)
-                            ftp_analysis(payload, payload_size);
+                            ftp_analysis(payload, payload_size, protocols);
                         else if ((ntohs(tcp_header->th_sport) == 20 || ntohs(tcp_header->th_dport) == 20)&& is_file_mining == 2)
                             ftp_fileMining(payload, payload_size);
                     }

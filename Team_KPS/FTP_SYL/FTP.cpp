@@ -3,7 +3,7 @@
 int is_file_mining;
 char file_name[500];
 
-void ftp_analysis(u_char *payload, int payload_size){    
+void ftp_analysis(u_char *payload, int payload_size, Protocols protocols){    
     char curr;
     int idx = 0;
     
@@ -31,6 +31,51 @@ void ftp_analysis(u_char *payload, int payload_size){
     strncpy(arg, (char*)arg_start, idx);
     arg[idx] = '\0';
 
+
+    protocols.proto = "FTP";
+    protocols.cmd = cmd;
+    protocols.argv = arg;
+
+    Value Log;
+    Log["protocol"] = protocols.proto;
+    
+    Value MAC;
+    char smac_str[30];
+    char dmac_str[30];
+    protocols.print_mac(protocols.smac, smac_str);
+    protocols.print_mac(protocols.dmac, dmac_str);
+    MAC["src"] = smac_str;
+    MAC["dst"] = dmac_str;
+
+    Log["MAC"] = MAC;
+
+    Value IP;
+    char sip_str[16], dip_str[16];
+    protocols.print_ip(protocols.ip_src, sip_str);
+    protocols.print_ip(protocols.ip_dst, dip_str);
+    IP["src"] = sip_str;
+    IP["dst"] = dip_str;
+
+    Log["IP"] = IP;
+
+    Value TCP;
+    TCP["src port"] = ntohs(protocols.sport);
+    TCP["dst port"] = ntohs(protocols.dport);
+
+    Log["TCP"] = TCP;
+
+    Value FTP;
+    FTP["cmd"] = protocols.cmd;
+    FTP["arg"] = protocols.argv;
+
+    Log["FTP"] = FTP;
+
+    Json::StyledWriter writer;
+    string str = writer.write(Log);
+ 
+    std::ofstream json_file("log_ftp.json", ios::app);
+    json_file << str;
+
     printf(">>> FTP\tCommand : %s |args : %s\n", cmd, arg);
     
     if(is_file_mining == 1){
@@ -52,7 +97,7 @@ void ftp_analysis(u_char *payload, int payload_size){
 
     memset(cmd, '\0', idx);
     memset(payload, '\0', payload_size);
-    
+
 }
 
 void ftp_fileMining(u_char *payload, int payload_size){

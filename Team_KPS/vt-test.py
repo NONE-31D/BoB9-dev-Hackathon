@@ -78,13 +78,16 @@ def file_analysis_result(md5):
     response = requests.get(url, params=params)
 
     scan_result = response.json()
-    print('\033[1m'+"SCAN RESULT ===================================================")
-    print('\033[0m')
+    print('\033[1m'+"SCAN RESULT ==================================================="+'\033[0m')
 
     for key, val in scan_result.items():
         if key == "scans":
             for key2, val2 in val.items():
-                print(f"{key2:20} detection ==> {val2['detected']}")
+                is_bold = '\033[0m'
+                if val2['detected']:
+                    is_bold = '\033[1m'
+                print(is_bold+f"{key2:20} detection ==> {val2['detected']}"+'\033[0m')
+            print()
             continue
         print(f"**{key}**")
         print(val)

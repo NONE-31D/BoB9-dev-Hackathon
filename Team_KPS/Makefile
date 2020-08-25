@@ -1,7 +1,7 @@
 SRC = func.cpp ftp.o http.o smtp.o
 
 all: ftp http smtp
-	g++ -o network-miner main.cpp $(SRC) -lpcap
+	g++ -o network-miner main.cpp $(SRC) -lpcap -ljsoncpp
 
 ftp:
 	g++ -c -o ftp.o ./FTP_SYL/FTP.cpp
