@@ -16,7 +16,7 @@ struct IPv4_INFO {
     u_int32_t dip;
     u_int16_t sport;
     u_int16_t dport;
-    char      file_name[255];
+    char      file_name[256];
 };
 
 
